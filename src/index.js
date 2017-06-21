@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App';
+import AppContainer from './containers/AppContainer';
 import registerServiceWorker from './registerServiceWorker';
-import './index.css';
+import { injectGlobal } from 'styled-components';
+import globals from './style/globals.js'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+// eslint-disable-next-line
+injectGlobal`${globals}`;
+
+ReactDOM.render(<AppContainer />,document.getElementById('root'));
 registerServiceWorker();
