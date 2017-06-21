@@ -1,31 +1,27 @@
 import React, { Component } from 'react';
-import { Page, Row, Column } from 'hedron/lib/index'
+import { Page, Row, Column } from 'hedron/lib/index';
+import FooterNav from './FooterNav';
+import {FooterStyle, Copyright} from './Footer.style.js';
 
 export default class Footer extends Component {
     render() {
         return (
-            <footer>
-                <Page debug>
+            <FooterStyle>
+                <Page>
                     <Row>
-                        <Column>
-                            <nav>
-                                <ul>
-                                    <li style={{display:'inline-block', margin:'0 5px'}}>link</li>
-                                    <li style={{display:'inline-block', margin:'0 5px'}}>link</li>
-                                    <li style={{display:'inline-block', margin:'0 5px'}}>link</li>
-                                    <li style={{display:'inline-block', margin:'0 5px'}}>link</li>
-                                </ul>
-                            </nav>
+                        <Column fluid>
+                            <FooterNav/>
                         </Column>
                     </Row>
-                <Row>
-                    <Column>
-                        <p>&copy; Nickpro 2017</p>
-                    </Column>
-                </Row>
                 </Page>
-            </footer>
+                <Page fluid>
+                    <Row>
+                        <Copyright fluid>
+                            <p>&copy; Nickpro 2017</p>
+                        </Copyright>
+                    </Row>
+                </Page>
+            </FooterStyle>
         )
     }
 }
-

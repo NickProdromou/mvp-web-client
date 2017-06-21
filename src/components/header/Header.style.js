@@ -1,7 +1,5 @@
 import Styled, { keyframes } from 'styled-components';
 import colours from '../../style/colours';
-import typograghy from '../../style/typography';
-import mediaQuery from '../../style/utils/MediaQueryGenerator';
 
 const spin = keyframes`
   from { transform: rotate(0deg); }

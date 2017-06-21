@@ -10,9 +10,13 @@ export default function setTheme(
   inverseText = colours.inverseText
 ) {
     return {
-      heading: {
+        heading: {
         background: secondary,
         title: secondary
-      }
+        },
+        body: {
+            background: '',
+            text: '',
+        }
     }
 }
