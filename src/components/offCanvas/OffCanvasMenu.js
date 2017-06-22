@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Styled, {keyframes} from 'styled-components';
 import colours from '../../style/colours';
+import { Page, Row, Column } from 'hedron/lib/index';
 
 const fadeIn = keyframes`
     from {
@@ -57,18 +58,19 @@ export default class OffCanvasMenu extends Component {
 
     render() {
         return (
-            <CanvasBg>
-                <MobileMenuWrapper>
-                    <nav>
-                        <ul>
-                            <li>Link</li>
-                            <li>Link</li>
-                            <li>Link</li>
-                            <li>Link</li>
-                        </ul>
-                    </nav>
-                </MobileMenuWrapper>
-            </CanvasBg>
+            <MobileMenuWrapper>
+                <nav>
+                    <ul>
+                        <li>Link</li>
+                        <li>Link</li>
+                        <li>Link</li>
+                        <li>Link</li>
+                    </ul>
+                </nav>
+                <CanvasBg>
+                    <p>click me to close</p>
+                </CanvasBg>
+            </MobileMenuWrapper>
         )
     }
 

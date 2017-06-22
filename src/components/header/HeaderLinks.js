@@ -28,7 +28,7 @@ export default class HeaderLinks extends Component {
         return (
         <NavigationLinks>
             <ul>
-                {navItems.map(x => <li>{x.title}</li>)}
+                {navItems.map(x => <li key={x.title}>{x.title}</li>)}
             </ul>
         </NavigationLinks>
         )
