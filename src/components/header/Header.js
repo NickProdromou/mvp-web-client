@@ -1,7 +1,7 @@
 import  React, { Component } from 'react';
 import { HeaderView } from './Header.style';
 import HeaderLinks from './HeaderLinks.js'
-import MenuToggle from './MenuToggle';
+// import MenuToggle from './MenuToggle';
 import { Page, Row, Column } from 'hedron';
 
 export default class Header extends Component {

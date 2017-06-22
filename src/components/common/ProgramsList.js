@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Page, Row, Column } from 'hedron/lib/index';
 import PropTypes from 'prop-types';
-import ProgramCard from '../common/programCard'
+import ProgramCard from './programCard'
 import ProgramListHeader from './programsList.style';
 
 export default class ProgramsList extends Component {

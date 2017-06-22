@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import IntroCallout from './Home.style';
-import {Column, Page, Row} from 'hedron/lib/index';
+import {Column, Row} from 'hedron/lib/index';
 
 const HomeCallout = (props) => (
     <IntroCallout>

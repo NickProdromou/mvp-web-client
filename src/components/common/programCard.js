@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import LinkButton from "./linkButton";
 import Program from './programCard.style';
 
 const ProgramCard = ({index, title, keys, link, linkText}) => (
-    <Program lg={5}>
-        <article key={index}>
+    <Program lg={5} key={index}>
+        <article>
             <h3>{title}</h3>
             <p>Keyboard shortcuts: {keys} </p>
             <LinkButton
