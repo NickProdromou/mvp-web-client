@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="sc-EHOje LlIEo sc-bxivhb jtJoDP"
+>
+  <article>
+    <h3>
+      blah
+    </h3>
+    <p>
+      Keyboard shortcuts: 
+      345
+       
+    </p>
+    <a
+      className="sc-bdVaJa bRdZkh"
+      href="/a-location"
+    >
+      SomeStuff
+    </a>
+  </article>
+</div>
+`;
