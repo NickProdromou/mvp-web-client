@@ -1,6 +1,7 @@
 import  React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {NavigationLinks} from './Header.style'
+import { Link } from 'react-router-dom';
 
 export default class HeaderLinks extends Component {
 
@@ -13,11 +14,10 @@ export default class HeaderLinks extends Component {
 
     static defaultProps = {
     navItems: [
-        {title: 'home'},
-        {title: 'about'},
-        {title: 'keys'},
-        {title: 'programs'},
-        {title: 'contact'}
+        {title: 'home', to: '/'},
+        {title: 'about', to: '/about'},
+        {title: 'programs', to: '/programs'},
+        {title: 'contact', to: 'contact'}
         ]
     };
 
@@ -28,7 +28,11 @@ export default class HeaderLinks extends Component {
         return (
         <NavigationLinks>
             <ul>
-                {navItems.map(x => <li key={x.title}>{x.title}</li>)}
+                {navItems.map((x, i) => (
+                    <li key={i}>
+                        <Link to={x.to}>{x.title}</Link>
+                    </li>
+                ))}
             </ul>
         </NavigationLinks>
         )

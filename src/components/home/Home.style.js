@@ -13,13 +13,15 @@ const Callout = Styled(Page)`
         padding: 5px 0;
         text-transform: uppercase;
         font-size: 1.8rem;
+        transition: all 0.5s ease-out;
+
     }
     
     h2 {
         font-family: ${typography.body};
         font-size: 1.2em;
         text-transform: uppercase;
-        
+        transition: all 0.5s ease-out;        
     }
 `;
 

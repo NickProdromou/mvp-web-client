@@ -50,7 +50,6 @@ const NavigationLinks = Styled.nav`
         list-style-type: none;
         padding: 3px 11px;
         display: inline-block;
-        color: ${colours.inverseText};
         margin: 5px 8px;
         text-transform: uppercase;
         
@@ -62,10 +61,9 @@ const NavigationLinks = Styled.nav`
     }
             
     a {
-        color: ${colours.alert};
+        color: ${colours.inverseText};
         background: ${colours.secondary};
         text-decoration: none;
-        color: initial;        
     }            
 `;
 
