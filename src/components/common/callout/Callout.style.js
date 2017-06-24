@@ -1,7 +1,7 @@
 import Styled from 'styled-components';
 import { Page } from 'hedron/lib/index';
-import typography from '../../style/typography';
-import colours from "../../style/colours";
+import typography from '../../../style/typography';
+import colours from "../../../style/colours";
 
 const Callout = Styled(Page)`
     margin-top: 15px;    

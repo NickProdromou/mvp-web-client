@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from './linkButton.style'
+import Button from './linkButton.style'
 
-const LinkButton = ({to, text}) => (<Link href={to}>{text}</Link>);
+
+const LinkButton = ({to, text}) => (<Button to={to}>{text}</Button>);
 
 LinkButton.propTypes = {
     to: PropTypes.string.isRequired,

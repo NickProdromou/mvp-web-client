@@ -1,8 +1,9 @@
 import Styled from 'styled-components';
-import colours from '../../style/colours';
-import typography from '../../style/typography';
+import colours from '../../../style/colours';
+import typography from '../../../style/typography';
+import { Link } from 'react-router-dom';
 
-const Link = Styled.a`
+const Button = Styled(Link)`
     background: ${colours.primary};
     font-family: ${typography.body};
     text-decoration: none;
@@ -15,4 +16,4 @@ const Link = Styled.a`
     letter-spacing: .034em;
 `;
 
-export default Link;
+export default Button;

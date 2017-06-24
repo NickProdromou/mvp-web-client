@@ -1,5 +1,5 @@
 import React from 'react';
-import LinkButton from '../../../components/common/linkButton';
+import LinkButton from '../../../components/common/linkButton/linkButton';
 import renderer from 'react-test-renderer';
 
 it('renders correctly', () => {

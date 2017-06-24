@@ -1,8 +1,8 @@
 import Styled from 'styled-components';
-import colours from '../../style/colours';
-import typography from '../../style/typography';
+import colours from '../../../style/colours';
+import typography from '../../../style/typography';
 import {Column} from "hedron/lib/index";
-import mediaQuery from '../../style/utils/MediaQueryGenerator';
+import mediaQuery from '../../../style/utils/MediaQueryGenerator';
 
 const Program = Styled(Column)` 
     padding: 0;

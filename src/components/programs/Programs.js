@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import Callout from "../common/callout/Callout";
 import ProgramsList from "../common/programsList/ProgramsList";
 
-export default class HomePage extends Component {
+export default class ProgramsPage extends Component {
 
-  render() {
+    render() {
         return(
             <main>
                 <Callout
-                    title={"Welcome to HackSpeed"}
-                    subText={"The name will probably change soon."}
+                    title={"Programs"}
+                    subText={"Here is a list of programs"}
                 />
                 <ProgramsList/>
             </main>

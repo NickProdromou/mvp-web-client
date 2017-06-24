@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Page, Row, Column } from 'hedron/lib/index';
 import PropTypes from 'prop-types';
-import ProgramCard from './programCard'
+import ProgramCard from '../programCard/programCard'
 import ProgramListHeader from './programsList.style';
 
 export default class ProgramsList extends Component {
@@ -15,12 +15,12 @@ export default class ProgramsList extends Component {
 
     static defaultProps = {
       programs:  [
-          {title:"photoshop", keys: 334,link: {to: '/sample-link', text:'view'}},
-          {title:"Illustrator", keys: 334,link: {to: '/sample-link', text:'view'}},
-          {title:"Chrome", keys: 334,link: {to: '/sample-link', text:'view'}},
-          {title:"Webstorm", keys: 334,link: {to: '/sample-link', text:'view'}},
-          {title:"OSX", keys: 334,link: {to: '/sample-link', text:'view'}},
-          {title:"Iterm2", keys: 334,link: {to: '/sample-link', text:'view'}},
+          {title:"photoshop", keys: 334,link: {to: '/programs/photoshop', text:'view'}},
+          {title:"Illustrator", keys: 334,link: {to: '/programs/illustrator', text:'view'}},
+          {title:"Chrome", keys: 334,link: {to: '/programs/chrome', text:'view'}},
+          {title:"Webstorm", keys: 334,link: {to: '/programs/webstorm', text:'view'}},
+          {title:"OSX", keys: 334,link: {to: '/programs/osx', text:'view'}},
+          {title:"Iterm2", keys: 334,link: {to: '/programs/iterm', text:'view'}},
       ]
     };
 

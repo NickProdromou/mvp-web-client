@@ -1,13 +1,7 @@
-import Styled, { keyframes } from 'styled-components';
-import colours from '../../style/colours';
-import typography from '../../style/typography';
-import mediaQuery from '../../style/utils/MediaQueryGenerator';
-
-
-const spin = keyframes`
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-`;
+import Styled from 'styled-components';
+import colours from '../../../style/colours';
+import typography from '../../../style/typography';
+import mediaQuery from '../../../style/utils/MediaQueryGenerator';
 
 const HeaderView = Styled.header`      
     margin: 0 auto;
@@ -16,8 +10,11 @@ const HeaderView = Styled.header`
     color: ${(props) => props.theme.heading.title};
     box-shadow: 1px 3px 7px 1px rgba(0,0,0,.2);
     height: 59px;
-
     
+    a {
+        text-decoration: none;  
+    }
+
     h1 {                    
         font-family: ${typography.heading};
         font-size: 1.5em;
@@ -26,17 +23,14 @@ const HeaderView = Styled.header`
         -webkit-font-smoothing: antialiased;
         color: ${colours.inverseText};
         text-align: center;
+        text-decoration: none;        
         
         ${mediaQuery('large',`
            text-align: left;
         `)}
         
     }
-    
-    img {
-        animation: ${spin} infinite 2s linear;
-        height: 60px;
-    }
+       
 `;
 
 const NavigationLinks = Styled.nav`
@@ -49,9 +43,13 @@ const NavigationLinks = Styled.nav`
         -webkit-font-smoothing: antialiased;
         list-style-type: none;
         padding: 3px 11px;
-        display: inline-block;
         margin: 5px 8px;
         text-transform: uppercase;
+        display: none;
+        
+        ${mediaQuery('large',`
+           display: inline-block;
+        `)}
         
         
         :hover {

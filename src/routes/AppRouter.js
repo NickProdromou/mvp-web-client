@@ -1,19 +1,14 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import PageContainer from "../containers/PageContainer";
 import HomePage from "../components/home/Home";
-import ProgramsList from "../components/common/ProgramsList";
-import Callout from "../components/home/Callout";
+import SingleProgram from '../components/program/Program.js'
 
+import AboutPage from "../components/about/About";
+import Contact from "../components/contact/Contact";
+import ProgramsPage from "../components/programs/Programs";
+import NotFound from "../components/notfound/NotFound";
 
-const Contact = () => (
-    <div style={{marginBottom: '400'}}>
-        <h2>Contact page</h2>
-        <hr/>
-        <p>Click here to contact this guy</p>
-        <a>PSyche</a>
-    </div>
-);
 
 export default class AppRouter extends Component {
 
@@ -21,10 +16,14 @@ export default class AppRouter extends Component {
         return (
             <BrowserRouter>
                 <PageContainer>
-                    <Route exact path="/" component={HomePage}/>
-                    <Route exact path="/programs" component={ProgramsList}/>
-                    <Route path="/about" component={Callout}/>
-                    <Route path="/contact" component={Contact}/>
+                    <Switch>
+                        <Route exact path="/" component={HomePage}/>
+                        <Route exact path="/programs" component={ProgramsPage}/>
+                        <Route path="/programs/:program" component={SingleProgram}/>
+                        <Route path="/about" component={AboutPage}/>
+                        <Route path="/contact" component={Contact}/>
+                        <Route path="*" component={NotFound} />
+                    </Switch>
                 </PageContainer>
             </BrowserRouter>
         )

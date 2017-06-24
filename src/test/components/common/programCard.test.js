@@ -1,5 +1,5 @@
 import React from 'react';
-import ProgramCard from '../../../components/common/programCard';
+import ProgramCard from '../../../components/common/programCard/programCard';
 import renderer from 'react-test-renderer';
 
 it('renders correctly', () => {

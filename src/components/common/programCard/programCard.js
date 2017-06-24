@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import LinkButton from "./linkButton";
+import LinkButton from "../linkButton/linkButton";
 import Program from './programCard.style';
 
 const ProgramCard = ({index, title, keys, link, linkText}) => (

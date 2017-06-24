@@ -1,5 +1,5 @@
 import Styled from 'styled-components';
-import colours from '../../style/colours';
+import colours from '../../../style/colours';
 import {Column} from "hedron/lib/index";
 
 const FooterStyle = Styled.footer`
