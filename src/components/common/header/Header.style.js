@@ -47,7 +47,7 @@ const NavigationLinks = Styled.nav`
         text-transform: uppercase;
         display: none;
         
-        ${mediaQuery('large',`
+        ${mediaQuery('medium',`
            display: inline-block;
         `)}
         
