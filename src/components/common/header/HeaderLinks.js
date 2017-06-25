@@ -1,6 +1,6 @@
 import  React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {NavigationLinks} from './Header.style'
+import { NavigationLinks } from './Header.style'
 import { Link } from 'react-router-dom';
 
 export default class HeaderLinks extends Component {

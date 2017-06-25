@@ -2,8 +2,8 @@ import  React, { Component } from 'react';
 import { HeaderView } from './Header.style';
 import HeaderLinks from './HeaderLinks.js'
 import { Link } from 'react-router-dom';
-// import MenuToggle from './MenuToggle';
 import { Page, Row, Column } from 'hedron';
+import MenuToggle from "./MenuToggle";
 
 export default class Header extends Component {
 
@@ -11,8 +11,9 @@ export default class Header extends Component {
 
         return (
         <HeaderView>
+            <MenuToggle/>
             <Page>
-                <Row divisions={6}>
+                <Row divisions={8}>
                     <Column lg={2} fluid>
                         <Link to="/">
                             <h1>{'HackSpeed >:('}</h1>
