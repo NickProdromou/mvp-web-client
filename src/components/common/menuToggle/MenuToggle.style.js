@@ -1,5 +1,5 @@
 import Styled from 'styled-components';
-import mediaQuery from '../../style/utils/MediaQueryGenerator';
+import mediaQuery from '../../../style/utils/MediaQueryGenerator';
 
 const Hamburger = Styled.div`
 display: block;

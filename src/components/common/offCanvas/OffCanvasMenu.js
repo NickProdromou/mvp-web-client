@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
-import { MobileMenuWrapper, CanvasBg } from './OffCanvasMenu.style';
+import { MobileMenuWrapper, CanvasBg} from './OffCanvasMenu.style';
 
 export default class OffCanvasMenu extends Component {
 
@@ -17,9 +17,9 @@ export default class OffCanvasMenu extends Component {
     render() {
         const { closeMenu, isMenuExpanded } = this.props;
 
-        if (!isMenuExpanded) {
-            return null;
-        }
+        // if (!isMenuExpanded) {
+        //     return null;
+        // }
 
         return (
         <div>
@@ -33,7 +33,7 @@ export default class OffCanvasMenu extends Component {
                     </ul>
                 </nav>
             </MobileMenuWrapper>
-            <CanvasBg onClick={closeMenu} className="canvasBg">
+            <CanvasBg isMenuExpanded={isMenuExpanded} onClick={closeMenu} className="canvasBg">
             </CanvasBg>
         </div>
 

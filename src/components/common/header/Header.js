@@ -3,7 +3,7 @@ import { HeaderView } from './Header.style';
 import HeaderLinks from './HeaderLinks.js'
 import { Link } from 'react-router-dom';
 import { Page, Row, Column } from 'hedron';
-import MenuToggle from "../../menuToggle/MenuToggle";
+import MenuToggle from "../menuToggle/MenuToggle";
 
 export default class Header extends Component {
 

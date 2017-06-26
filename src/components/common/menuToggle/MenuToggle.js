@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Hamburger from './MenuToggle.style';
-import OffCanvasMenu from "../common/offCanvas/OffCanvasMenu";
+import OffCanvasMenu from "../offCanvas/OffCanvasMenu";
 
 
 export default class MenuToggle extends Component {

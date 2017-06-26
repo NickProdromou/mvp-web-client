@@ -1,28 +1,6 @@
-import Styled, {keyframes} from 'styled-components';
+import Styled from 'styled-components';
 import colours from '../../../style/colours';
 import typography from '../../../style/typography';
-
-
-const slideIn = keyframes`
-    from {
-        transform: translateX(-100vw);
-    }
-    to {
-    
-    }
-`;
-
-
-const CanvasBg = Styled.div`
-    background: rgba(0,0,0,.5);
-    top: 0;
-    width: calc(100vw + 150px);          
-    height: 100vh;
-    position: absolute;
-    z-index: 100;
-    animation: ${slideIn} alternate 1s ease-in-out;
-`;
-
 
 const MobileMenuWrapper = Styled.div`
     top: 0;
@@ -32,8 +10,14 @@ const MobileMenuWrapper = Styled.div`
     padding-top: 50px;
     z-index: 1000;
     position: fixed;
-    animation: ${slideIn} alternate 1s ease-in-out;
     box-shadow: 1px 1px 9px 5px rgba(0,0,0,0.32);
+    ${(props) => props.isMenuExpanded 
+    ? `transform: translateX(0px);` 
+    : `transform: translateX(-160px);`
+    }
+    transition: transform 0.5s ease-in-out;
+    
+    //transition: transform 1s cubic-bezier(1, -0.03, 0.56, 1.51);
     
     nav {
         margin-top: 70px;
@@ -68,7 +52,28 @@ const MobileMenuWrapper = Styled.div`
            }            
         }
     }
-    
+
 `;
+
+const CanvasBg = Styled.div`
+
+    ${(props) => props.isMenuExpanded
+    ? 
+    `transform: translateX( calc(0vw - 150px) );
+    opacity: 1;`
+    : 
+    `opacity: 0;
+    transform: translateX( calc(-104vw - 150px) );
+    `}
+    
+    transition: opacity 1s ease-in-out;
+    background: rgba(0,0,0,.8);
+    top: 0;
+    width: calc(100vw + 150px);          
+    height: 100vh;
+    position: fixed;
+    z-index: 100;
+`;
+
 
 export { CanvasBg, MobileMenuWrapper };
