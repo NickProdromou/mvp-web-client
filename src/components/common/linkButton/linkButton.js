@@ -10,4 +10,9 @@ LinkButton.propTypes = {
     text: PropTypes.string.isRequired
 };
 
+LinkButton.contextTypes = {
+    router: PropTypes.func.isRequired
+
+};
+
 export default LinkButton;

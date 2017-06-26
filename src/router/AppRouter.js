@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import PageContainer from "../containers/PageContainer";
+import PageContainer from "../containers/page/PageContainer";
 import HomePage from "../components/home/Home";
 import SingleProgram from '../components/program/Program.js'
 

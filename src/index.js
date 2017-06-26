@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import AppContainer from './containers/AppContainer';
+import AppContainer from './containers/app/AppContainer';
 import registerServiceWorker from './registerServiceWorker';
 import { injectGlobal } from 'styled-components';
 import globals from './style/globals.js'

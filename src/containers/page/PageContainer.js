@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Header from '../components/common/header/Header';
-import Footer from '../components/common/footer/Footer';
-import logo from '../assets/images/logo.svg';
+import Header from '../../components/common/header/Header';
+import Footer from '../../components/common/footer/Footer';
+import logo from '../../assets/images/logo.svg';
 
 export default class PageContainer extends Component {
 

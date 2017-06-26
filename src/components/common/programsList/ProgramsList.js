@@ -13,6 +13,10 @@ export default class ProgramsList extends Component {
       }))
     };
 
+    static contextTypes = {
+        router: PropTypes.func.isRequired
+    };
+
     static defaultProps = {
       programs:  [
           {title:"photoshop", keys: 334,link: {to: '/programs/photoshop', text:'view'}},
