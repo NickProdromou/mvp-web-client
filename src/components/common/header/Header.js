@@ -1,9 +1,9 @@
 import  React, { Component } from 'react';
-import { HeaderView } from './Header.style';
-import HeaderLinks from './HeaderLinks.js'
+import HeaderView from './Header.style';
 import { Link } from 'react-router-dom';
-import { Page, Row, Column } from 'hedron';
+import { Page, Row, Column } from 'hedron/lib/index';
 import MenuToggle from "../menuToggle/MenuToggle";
+import NavLinks from "../navLinks/NavLinks";
 
 export default class Header extends Component {
 
@@ -20,7 +20,7 @@ export default class Header extends Component {
                         </Link>
                     </Column>
                     <Column lg={4} md={5} fluid>
-                        <HeaderLinks/>
+                        <NavLinks/>
                     </Column>
                 </Row>
             </Page>

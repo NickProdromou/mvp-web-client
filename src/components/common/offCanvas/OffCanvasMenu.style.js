@@ -12,12 +12,10 @@ const MobileMenuWrapper = Styled.div`
     position: fixed;
     box-shadow: 1px 1px 9px 5px rgba(0,0,0,0.32);
     ${(props) => props.isMenuExpanded 
-    ? `transform: translateX(0px);` 
-    : `transform: translateX(-160px);`
+        ? `transform: translateX(0px);` 
+        : `transform: translateX(-160px);`
     }
     transition: transform 0.5s ease-in-out;
-    
-    //transition: transform 1s cubic-bezier(1, -0.03, 0.56, 1.51);
     
     nav {
         margin-top: 70px;
@@ -66,7 +64,7 @@ const CanvasBg = Styled.div`
     transform: translateX( calc(-104vw - 150px) );
     `}
     
-    transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-out;
     background: rgba(0,0,0,.8);
     top: 0;
     width: calc(100vw + 150px);          

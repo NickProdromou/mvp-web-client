@@ -33,39 +33,6 @@ const HeaderView = Styled.header`
        
 `;
 
-const NavigationLinks = Styled.nav`
-    margin-top: 1em;
-    
-    li {
-        font-family: ${typography.heading};
-        font-size: 0.8em;
-        font-weight: normal;
-        -webkit-font-smoothing: antialiased;
-        list-style-type: none;
-        padding: 3px 11px;
-        margin: 5px 8px;
-        text-transform: uppercase;
-        display: none;
-        
-        ${mediaQuery('medium',`
-           display: inline-block;
-        `)}
-        
-        
-        :hover {
-            border-bottom: 2px solid ${colours.accent};
-        }
-        
-    }
-            
-    a {
-        color: ${colours.inverseText};
-        background: ${colours.secondary};
-        text-decoration: none;
-    }            
-`;
 
-
-
-export { HeaderView, NavigationLinks };
+export default HeaderView;
 
