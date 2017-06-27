@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Page, Row, Column } from 'hedron/lib/index';
-import FooterNav from './FooterNav';
 import {FooterStyle, Copyright} from './Footer.style.js';
+import NavLinks from "../navLinks/NavLinks";
 
 export default class Footer extends Component {
     render() {
@@ -10,7 +10,7 @@ export default class Footer extends Component {
                 <Page>
                     <Row>
                         <Column fluid>
-                            <FooterNav/>
+                            <NavLinks/>
                         </Column>
                     </Row>
                 </Page>

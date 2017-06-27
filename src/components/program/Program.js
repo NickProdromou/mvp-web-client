@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Callout from "../common/callout/Callout";
-import { Page, Row, Column } from 'hedron/lib/index';
+import KeyTable from "../common/keyTable/KeyTable";
 
 export default class SingleProgram extends Component {
 
@@ -28,13 +28,9 @@ export default class SingleProgram extends Component {
                     title={program}
                     subText={desc}
                 />
-                <Page>
-                    <Row>
-                        <Column>
-
-                        </Column>
-                    </Row>
-                </Page>
+                <KeyTable
+                    programTitle={program}
+                />
             </main>
         )
     }
