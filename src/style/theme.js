@@ -17,6 +17,6 @@ export default function setTheme(
         body: {
             background: '',
             text: '',
-        }
+        },
     }
 }
