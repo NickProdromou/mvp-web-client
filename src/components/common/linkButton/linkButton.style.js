@@ -4,10 +4,10 @@ import typography from '../../../style/typography';
 import { Link } from 'react-router-dom';
 
 const Button = Styled(Link)`
-    background: ${colours.primary};
+    background: ${(props) => props.theme.button.background};
     font-family: ${typography.body};
     text-decoration: none;
-    color: #fff;
+    color: ${(props) => props.theme.button.text};
     padding: 5px 15px;
     -webkit-font-smoothing: antialiased;
     text-transform: uppercase;

@@ -1,71 +1,57 @@
 import Styled from 'styled-components';
 import typography from '../../../style/typography';
-import colours from '../../../style/colours';
 import mediaQuery from '../../../style/utils/MediaQueryGenerator';
+import {NavLink} from "react-router-dom";
 
-const NavigationLinks = Styled.nav`
-   ${(props) => props.vertical 
+const NavContainer = Styled.nav`
+
+margin-top: ${ props => props.vertical ? '70px' : '1em' };
+z-index: ${ props => props.vertical ? `1100;` : `unset`};
+
+`;
+
+const ListContainer = Styled.ul`            
+
+top: ${ props => props.vertical ? '25px' : 'initial' };
+max-width: ${ props => props.vertical ? '150px' : '100%' };
+margin: ${ props => props.vertical ? '0' : 'inherit' };
+z-index: ${ props => props.vertical ? '10' : 'unset' };
+padding: 0;
+
+`;
+
+const ListItem = Styled.li`
+
+margin: 5px ${ props => props.vertical ? '0' : '8px' };
+padding: ${ props => props.vertical ? '10px 0' : '3px 11px' };
+display: ${ props => props.vertical ? 'block' : 'none' };
+font-family: ${typography.heading};
+text-transform: uppercase;
+text-align: ${ props => props.vertical ? 'center' : 'left'};
+list-style-type: none;
+font-size: 0.8em;
+font-weight: normal;
+-webkit-font-smoothing: antialiased;
+color: ${ props => props.theme.NavigationLinks.colour};
     
-    ? ` margin-top: 70px;
-       z-index: 1100;
-    
-    ul {
-        top: 25px;
-        max-width: 150px;
-        margin: 0;
-        padding: 0;
-        z-index: 10;
-        
-        > li {
-            list-style-type: none;
-            font-family: ${typography.body};
-            font-size: .8em;
-            color: ${props.theme.NavigationLinks.colour};
-            margin: 5px 0;
-            padding: 10px 0;
-            text-align: center;
-            text-transform: uppercase;     
+${ props => props.vertical ? ``: `
+    ${mediaQuery('medium', `
+        display: inline-block !important;
+    `)}    
+`}
+
+`;
+
+const MenuLink = Styled(NavLink)`
+
+padding-bottom: 5px;
+color: ${ ({theme}) => theme.NavigationLinks.colour };
+text-decoration: none;
             
-           > a {
-                padding-bottom: 5px;
-                color: ${props.theme.NavigationLinks.colour};
-                
-                    &:hover {
-                        border-bottom: 2px solid ${props.theme.NavigationLinks.hoverUnderline};
-                    }
-                }            
-        }
-    }` 
-    
-    : ` margin-top: 1em;
-    
-    li {
-        font-family: ${typography.heading};
-        font-size: 0.8em;
-        font-weight: normal;
-        -webkit-font-smoothing: antialiased;
-        list-style-type: none;
-        padding: 3px 11px;
-        margin: 5px 8px;
-        text-transform: uppercase;
-        display: block;
-        
-        ${mediaQuery('medium',`
-           display: inline-block !important;
-        `)}
-        
-        > a {
-            color: ${props.theme.NavigationLinks.colour};
-            padding-bottom: 5px;         
-            text-decoration: none;
-            
-            &:hover {
-                border-bottom: 2px solid ${colours.accent};
-            }        
-        
-        }
-        
+    &:hover {
+        border-bottom: 2px solid ${ props => props.theme.NavigationLinks.hoverUnderline};
     }
-`}`;
 
-export default NavigationLinks;
+`;
+
+export  { NavContainer, ListContainer, ListItem, MenuLink };

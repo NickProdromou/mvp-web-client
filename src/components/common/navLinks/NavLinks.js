@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types'
-import { NavLink } from 'react-router-dom';
-import NavigationLinks from "./NavLinks.style";
+import { NavContainer, ListContainer, ListItem, MenuLink } from "./NavLinks.style";
 
 export default class NavLinks extends Component {
 
@@ -16,6 +15,7 @@ export default class NavLinks extends Component {
     };
 
     static defaultProps = {
+        vertical: false,
         links: [
             {title: 'home', href: '/'},
             {title: 'about', href: '/about'},
@@ -26,20 +26,20 @@ export default class NavLinks extends Component {
 
 
     render () {
-        const { links } = this.props;
+        const { links, vertical } = this.props;
 
         let menuFunction = this.props.closeOffCanvas ? this.props.closeOffCanvas : null;
 
         return (
-            <NavigationLinks>
-                <ul onClick={ menuFunction }>
+            <NavContainer vertical={vertical}>
+                <ListContainer vertical={vertical} className="test-class" onClick={ menuFunction }>
                     { links.map((link, i) => (
-                        <li key={i}>
-                            <NavLink to={link.href}>{link.title}</NavLink>
-                        </li>
+                        <ListItem vertical={vertical} key={i}>
+                            <MenuLink vertical={vertical} to={link.href}>{link.title}</MenuLink>
+                        </ListItem>
                     )) }
-                </ul>
-            </NavigationLinks>
+                </ListContainer>
+            </NavContainer>
         )
     }
 }
