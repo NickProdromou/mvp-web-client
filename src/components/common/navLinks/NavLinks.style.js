@@ -20,19 +20,18 @@ const NavigationLinks = Styled.nav`
             list-style-type: none;
             font-family: ${typography.body};
             font-size: .8em;
-            color: #fff;
+            color: ${props.theme.NavigationLinks.colour};
             margin: 5px 0;
             padding: 10px 0;
             text-align: center;
             text-transform: uppercase;     
             
            > a {
-                color: #fff;
                 padding-bottom: 5px;
+                color: ${props.theme.NavigationLinks.colour};
                 
                     &:hover {
-                        border-bottom: 2px solid ${colours.accent};
-                        color: #fff;
+                        border-bottom: 2px solid ${props.theme.NavigationLinks.hoverUnderline};
                     }
                 }            
         }
@@ -56,13 +55,12 @@ const NavigationLinks = Styled.nav`
         `)}
         
         > a {
-            color: #fff;
+            color: ${props.theme.NavigationLinks.colour};
             padding-bottom: 5px;         
             text-decoration: none;
             
             &:hover {
                 border-bottom: 2px solid ${colours.accent};
-                color: #fff;            
             }        
         
         }

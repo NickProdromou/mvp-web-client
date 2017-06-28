@@ -10,7 +10,9 @@ export default class Footer extends Component {
                 <Page>
                     <Row>
                         <Column fluid>
-                            <NavLinks/>
+                            <NavLinks
+                                vertical={false}
+                            />
                         </Column>
                     </Row>
                 </Page>

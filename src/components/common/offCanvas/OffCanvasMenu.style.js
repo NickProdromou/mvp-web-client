@@ -1,12 +1,15 @@
 import Styled from 'styled-components';
 import colours from '../../../style/colours';
 import typography from '../../../style/typography';
+import mediaQuery from '../../../style/utils/MediaQueryGenerator';
+
+/* TODO: REMOVE NAV STYLE*/
 
 const MobileMenuWrapper = Styled.div`
     top: 0;
     height: 100vh;
     width: 150px;
-    background: ${colours.secondary};    
+    background: ${(props) => props.theme.MobileMenuWrapper.background};    
     padding-top: 50px;
     z-index: 1000;
     position: fixed;
@@ -17,7 +20,11 @@ const MobileMenuWrapper = Styled.div`
     }
     transition: transform 0.5s ease-in-out;
     
-    nav {
+    ${mediaQuery('medium', `
+        display: none;
+    `)}
+            
+    nav {  
         margin-top: 70px;
         z-index: 1100;
     }
@@ -28,7 +35,8 @@ const MobileMenuWrapper = Styled.div`
         margin: 0;
         padding: 0;
         z-index: 10;
-        > li {
+        
+        li {
             list-style-type: none;
             font-family: ${typography.body};
             font-size: .8em;
@@ -37,6 +45,7 @@ const MobileMenuWrapper = Styled.div`
             padding: 10px 0;
             text-align: center;
             text-transform: uppercase;     
+            display: block;
             
            > a {
                 color: #fff;
@@ -45,7 +54,7 @@ const MobileMenuWrapper = Styled.div`
                 &:hover {
                     border-bottom: 2px solid ${colours.accent};
                     color: #fff;
-            }
+                }
                 
            }            
         }
@@ -71,6 +80,11 @@ const CanvasBg = Styled.div`
     height: 100vh;
     position: fixed;
     z-index: 100;
+    
+    ${mediaQuery('medium', `
+        display: none;
+    `)}
+    
 `;
 
 

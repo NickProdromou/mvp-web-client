@@ -20,7 +20,9 @@ export default class Header extends Component {
                         </Link>
                     </Column>
                     <Column lg={4} md={5} fluid>
-                        <NavLinks/>
+                        <NavLinks
+                            vertical={false}
+                        />
                     </Column>
                 </Row>
             </Page>

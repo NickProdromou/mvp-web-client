@@ -13,12 +13,11 @@ export default class PageContainer extends Component {
     render() {
         const { children } =  this.props;
         return (
-            <div>
-                <Header logo={logo} />
-                { children }
-                <Footer/>
-            </div>
-
+                <div>
+                    <Header logo={logo} />
+                    { children }
+                    <Footer/>
+                </div>
         )
     }
 }

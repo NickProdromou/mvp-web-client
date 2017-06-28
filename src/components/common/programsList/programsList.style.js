@@ -2,8 +2,8 @@ import { Page } from 'hedron/lib/index';
 import Styled from 'styled-components';
 
 const ProgramListHeader = Styled(Page)`
-    background: #607d8b;
-    color: #fff;
+    background: ${(props) => props.theme.programsList.headingBackground};
+    color: ${(props) => props.theme.programsList.headingText};
     -webkit-font-smoothing: antialiased;
     
     div {

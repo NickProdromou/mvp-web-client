@@ -6,7 +6,7 @@ import NavigationLinks from "./NavLinks.style";
 export default class NavLinks extends Component {
 
     static propTypes = {
-        vertical: PropTypes.bool,
+        vertical: PropTypes.bool.isRequired,
         links: PropTypes.arrayOf(
             PropTypes.shape({
                 title: PropTypes.string.isRequired,
@@ -16,7 +16,6 @@ export default class NavLinks extends Component {
     };
 
     static defaultProps = {
-        vertical: false,
         links: [
             {title: 'home', href: '/'},
             {title: 'about', href: '/about'},
@@ -24,6 +23,7 @@ export default class NavLinks extends Component {
             {title: 'contact', href: 'contact'}
         ]
     };
+
 
     render () {
         const { links } = this.props;

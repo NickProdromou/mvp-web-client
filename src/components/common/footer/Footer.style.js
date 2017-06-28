@@ -1,14 +1,13 @@
 import Styled from 'styled-components';
-import colours from '../../../style/colours';
 import {Column} from "hedron/lib/index";
 
 const FooterStyle = Styled.footer`
-    background: ${colours.secondary};       
+    background: ${(props) => props.theme.footer.background};       
 `;
 
 const Copyright = Styled(Column)`
-    background: #1f2431;
-    color: #eee;
+    background: ${(props) => props.theme.copyright.background};
+    color: ${(props) => props.theme.copyright.color};
     font-size: .8em;
     text-align: center;
 `;

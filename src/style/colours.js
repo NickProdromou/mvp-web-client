@@ -5,8 +5,7 @@ const colours = {
     alert: '#c33c54',
     accent : '#8EE3EF',
     baseText: '#222',
-    inverseText: '#fff',
-    success: ''
+    inverseText: '#ffffff',
 };
 
 export default colours;

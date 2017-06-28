@@ -1,5 +1,4 @@
 import Styled from 'styled-components';
-import colours from '../../../style/colours';
 import typography from '../../../style/typography';
 import {Column} from "hedron/lib/index";
 import mediaQuery from '../../../style/utils/MediaQueryGenerator';
@@ -15,11 +14,12 @@ const Program = Styled(Column)`
     
     article {
         padding: 20px 15px;
-        background: #eee;
-        border-bottom: 1px dashed ${colours.primary};
+        background: ${(props) => props.theme.programCard.background};
+        border-bottom: 1px dashed ${ (props) => props.theme.programCard.border};
+        border-color: ${(props) => props.theme.programCard.border};
         
         ${mediaQuery('medium',`
-            border-left: 4px solid ${colours.primary};
+            border-left: 4px solid;
             border-bottom: none;
         `)}
                 
@@ -28,7 +28,7 @@ const Program = Styled(Column)`
             margin: 0;
             font-size: 18px;
             font-family: ${typography.heading};
-            color: ${colours.tertiary};
+            color: ${(props) => props.theme.programCard.text};
             text-transform: uppercase;
             font-weight: 100;
         }
